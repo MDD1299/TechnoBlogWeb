@@ -1,0 +1,863 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    background-color: rgb(0, 43, 83);
+  }
+  * {box-sizing: border-box;}
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .logo{
+    width: 170px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding-left: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 12;
+    background: rgb(36, 36, 63);
+    color: rgb(209, 171, 4);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .mySlides {display: none;}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin-left: 0;
+  }
+  
+  /* Caption text */
+  .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;  
+    padding-left: 2%;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 600px) {
+    .text {font-size: 11px}
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .text {font-size: 20px}
+  }
+
+
+ .Welcome{
+   text-align: center;
+   color: #fff;
+ }
+  .Welcome h1{
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    color: rgb(209, 144, 4);
+  }
+
+  .Welcome p{
+    font-size: 20px;
+  }
+  
+  .Welcome h2{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+  }
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: rgba(119, 136, 153, 0.473);
+    padding: 10px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .modImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+   .bloglinks:link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .bloglinks:visited {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .bloglinks:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .modImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px)
+  {
+    .modal-content 
+    {
+      width: 100%;
+    }
+  }
+
+
+ /*FOOTER*/
+  footer {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .row2 {
+    margin: 8px -16px;
+    background-color: rgba(119, 136, 153, 0.473);
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row2,
+  .row2 > .column2 {
+    padding: 8px;
+    color: #fff;
+  }
+  .row2 h3{
+    color: lightseagreen;
+  }
+  /* Create three equal columns that floats next to each other */
+  .column2 {
+    float: left;
+    width: 33.3%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content2 {
+    background-color: none;
+    padding: 10px;
+  }
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column2 {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column2 {
+      width: 100%;
+    }
+  }
+
+  .returnTop a {
+    
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    text-emphasis: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 20px 6px;
+    
+  }
+
+  .returnTop button{
+    margin: 60px 0% 10px 47.5%;
+    background-color: rgba(128, 128, 128, 0.397);
+  }
+
+  /*BLOG*/
+  .articlegrid
+  {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 3em;
+    background-color: rgba(119, 136, 153, 0.342);
+    padding: 30px;
+  }
+
+
+  .articlegpage
+  {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+  }
+
+  .articlegrid h3{
+    color: lightseagreen;
+  }
+
+  .seemore
+  {
+    color: lightseagreen;
+  }
+
+  .articleimg
+  {
+    width:100%;
+    max-width:1000px;
+    height: 100%;
+    height: 190px;
+    border-radius: 10px;    
+    cursor: pointer;
+    transition: 0.3s;
+    
+  }
+  
+  .articletext{
+    color: white;
+    font-size: 18px;
+  }
+
+  
+
+  .articlelinks:link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .articlelinks:visited {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  .articlelinks:hover {
+    text-decoration: underline;
+  }
+
+
+  .contactgrid2 {
+    color: white;
+  }
+
+  .contactgrid3 {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10em;
+    background-color: rgba(119, 136, 153, 0.473);
+    padding: 30px;
+  }
+
+  @media screen and (min-width: 700px) {
+    .articleimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 100%;
+      height: 310px;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .articleimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 100%;
+      height: 290px;
+    }
+  }
+
+  .aboutimg
+  {
+    width:100%;
+    max-width:1000px;
+    height: 100%;
+    height: 270px;
+    border-radius: 1000px;    
+    
+  }
+
+  @media screen and (min-width: 1000px) {
+    .aboutimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 100%;
+      height: 270px;
+      border-radius: 1000px;          
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .aboutimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 350px;
+      border-radius: 1000px;          
+    }
+
+  }
+
+  @media screen and (max-width: 700px) {
+    .aboutimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 300px;
+      border-radius: 1000px;          
+    }
+
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .aboutimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 270px;
+      border-radius: 1000px;          
+    }
+
+  }
+
+  @media screen and (min-width: 800px) {
+
+    .articlegrid
+    {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3em;
+      background-color: rgba(119, 136, 153, 0.473);
+      padding: 30px;
+    }
+
+
+    .contactgrid {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contactgrid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      color: white;
+    }
+
+    .contactgrid3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3em;
+      background-color: rgba(119, 136, 153, 0.473);
+      padding: 30px;
+    }
+
+    .articleimg
+    {
+      width:100%;
+      max-width:1000px;
+      height: 100%;
+      height: 270px;
+      border-radius: 10px;    
+      cursor: pointer;
+      transition: 0.3s;
+      
+    }
+  }
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  max-width: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+  @media screen and (min-width: 1000px) {
+  /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height: 580px;
+}
+
+.map-responsive iframe{
+
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+
+}
+
+.aboutwidth {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-column-gap: 10em;
+  background-color: rgba(119, 136, 153, 0.473);
+  padding: 30px;
+}
+
+.aboutgrid
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Center website */
+.aboutmain {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .articleimg
+  {
+    width:100%;
+    max-width:1000px;
+    height: 100%;
+    height: 290px;
+  }
+}
+
+.aboutowners{
+  text-align: center;
+  color: #fff;
+}
+ .aboutowners h1{
+   text-transform: uppercase;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 45px;
+   color: rgb(209, 144, 4);
+ }
+
+ .aboutowners p{
+   font-size: 20px;
+ }
+ 
+ .aboutowners h2{
+   font-size: 30px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   text-transform: uppercase;
+ }
+
+
+ .aboutimgowner
+ {
+   width:100%;
+   max-width:300px;
+   height: 100%;
+   height: 270px;
+   border-radius: 1000px;    
+   
+ }
+
+ @media screen and (min-width: 1000px) {
+   .aboutimgowner
+   {
+     width:100%;
+     max-width: 300px;
+     height: 100%;
+     height: 270px;
+     border-radius: 1000px;          
+   }
+ }
+
+ @media screen and (max-width: 800px) {
+   .aboutimgowner
+   {
+     width:100%;
+     max-width:400px;
+     height: 350px;
+     border-radius: 1000px;          
+   }
+
+ }
+
+ @media screen and (max-width: 700px) {
+   .aboutimgowner
+   {
+     width:100%;
+     max-width:300px;
+     height: 300px;
+     border-radius: 1000px;          
+   }
+
+ }
+
+
+ @media screen and (max-width: 600px) {
+   .aboutimg
+   {
+     width:100%;
+     max-width: 100%;
+     height: 270px;
+     border-radius: 1000px;          
+   }
+
+ }
+
+ .ownergrid
+ {
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-column-gap: 3em;
+   background-color: rgba(119, 136, 153, 0.473);
+   padding: 30px;
+ }
+ @media screen and (min-width: 800px) {
+
+  .ownergrid
+  {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3em;
+    background-color: rgba(119, 136, 153, 0.473);
+    padding: 30px;
+  }
+ }
+
+ .namefont
+ {
+   font-size: 25px;
+   color: white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+
+ .video
+ {
+   display: grid;
+   grid-template-columns: 1fr ;
+   grid-column-gap: 1em;
+   text-align: center;
+   size: 50%;
+ }
+
+ @media screen and (min-width: 800px){
+  .video
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+ }
+
+ .video {
+  text-align: center;
+}
+
+/*Social Nav*/
+.icon-bar {
+  position: fixed;
+  top: 84%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
